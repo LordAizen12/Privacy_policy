@@ -1,20 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QuickMentor AI - Privacy Policy</title>
+    <title>QuickTrack - Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for QuickTrack. Transparency and security first." />
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              holo: {
+                dark: '#0B0C15',
+                card: 'rgba(255, 255, 255, 0.03)',
+                border: 'rgba(255, 255, 255, 0.1)',
+              }
+            }
+          }
+        }
+      }
+    </script>
+
     <style>
       body {
-        font-family: 'Inter', sans-serif;
-        background-color: #f8fafc;
-        color: #1e293b;
+        background-color: #0B0C15;
+        color: #e2e8f0;
+        /* Subtle mesh gradient background */
+        background-image: 
+          radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+          radial-gradient(at 50% 0%, hsla(260,30%,20%,1) 0, transparent 50%), 
+          radial-gradient(at 100% 0%, hsla(320,40%,20%,1) 0, transparent 50%);
+        background-attachment: fixed;
       }
-      .fade-in-up {
+
+      /* Holographic Text Gradient */
+      .text-holographic {
+        background: linear-gradient(to right, #22d3ee, #e879f9, #818cf8);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      /* Glassmorphism Card */
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+      }
+
+      .glass-header {
+        background: rgba(11, 12, 21, 0.7);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      /* Animations */
+      .animate-fade-in-up {
         animation: fadeInUp 0.8s ease-out forwards;
         opacity: 0;
         transform: translateY(20px);
@@ -29,20 +84,231 @@
           transform: translateY(0);
         }
       }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0B0C15;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569;
+      }
     </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0"
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
   }
 }
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
+  <body class="antialiased selection:bg-fuchsia-500/30 selection:text-fuchsia-200 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full glass-header">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <!-- Logo Icon -->
+          <div class="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-cyan-300">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <span class="text-xl font-bold tracking-tight text-white">QuickTrack</span>
+        </div>
+        <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md transition-all">
+          Contact Support
+        </a>
+      </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Hero Section -->
+      <div class="relative pt-16 pb-12 sm:pt-20 sm:pb-24 text-center">
+        <!-- Badge -->
+        <div class="inline-flex items-center justify-center px-4 py-1.5 mb-8 text-xs font-semibold tracking-wide uppercase text-cyan-300 bg-cyan-950/30 border border-cyan-800/50 rounded-full animate-fade-in-up">
+          Developed by Aizen
+        </div>
+        
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight mb-8 animate-fade-in-up delay-100">
+          <span class="text-holographic">Privacy Policy</span>
+        </h1>
+        
+        <p class="text-lg text-slate-400 mb-8 max-w-xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+          We believe in transparency. QuickTrack is built to protect your privacy while helping you stay organized.
+        </p>
+        
+        <div class="flex items-center justify-center space-x-2 text-sm text-slate-500 animate-fade-in-up delay-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span>
+          <span>Last updated: 27 Nov 2025</span>
+        </div>
+      </div>
+
+      <!-- Policy Content -->
+      <div class="space-y-6 pb-12 animate-fade-in-up delay-300">
+
+        <!-- Section 1 -->
+        <section class="glass-panel rounded-2xl p-6 sm:p-8 hover:bg-white/[0.04] transition-colors duration-300">
+          <h2 class="text-xl font-bold text-white mb-4">1. Information We Collect</h2>
+          <div class="text-slate-300 leading-relaxed space-y-4">
+            <p>The App does NOT collect, store, or share any personally identifiable information (PII).</p>
+            
+            <div class="mt-4">
+              <p class="font-medium text-slate-200 mb-3">The App may process the following (depending on features):</p>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                  <span>Text entered by the user to generate responses (sent to external APIs).</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                  <span>Basic, non-identifiable app usage data (app opens, button clicks).</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-white/5">
+              <p class="flex items-center text-slate-400 text-sm">
+                <svg class="w-4 h-4 text-emerald-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                No names, emails, phone numbers, or sensitive personal data are collected.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="glass-panel rounded-2xl p-6 sm:p-8 hover:bg-white/[0.04] transition-colors duration-300">
+          <h2 class="text-xl font-bold text-white mb-4">2. How We Use Information</h2>
+          <div class="text-slate-300 leading-relaxed space-y-4">
+            <p>Any information entered in the App is used only to provide app functionality, such as:</p>
+            <div class="mt-4">
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                  <span>Generating automated responses</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                  <span>Improving app experience</span>
+                </li>
+              </ul>
+            </div>
+            <p class="text-sm text-slate-400 mt-2">We do not sell or share data with third parties for marketing.</p>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="glass-panel rounded-2xl p-6 sm:p-8 hover:bg-white/[0.04] transition-colors duration-300">
+          <h2 class="text-xl font-bold text-white mb-4">3. Third-Party Services</h2>
+          <div class="text-slate-300 leading-relaxed space-y-4">
+            <p>The App may use the following external services:</p>
+            
+            <div class="mt-4">
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <span class="inline-flex items-center justify-center w-5 h-5 rounded bg-white/10 text-xs font-bold mr-3 mt-0.5">1</span>
+                  <span>OpenAI / Gemini / other third-party APIs (for generating responses)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <ul class="space-y-2 text-sm text-slate-400">
+                <li class="flex items-start">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-500 mr-2.5 mt-1.5"></span>
+                  <span>These services may receive text you enter, only for processing.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-500 mr-2.5 mt-1.5"></span>
+                  <span>Each service follows its own privacy policy.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="glass-panel rounded-2xl p-6 sm:p-8 hover:bg-white/[0.04] transition-colors duration-300">
+          <h2 class="text-xl font-bold text-white mb-4">4. Data Storage</h2>
+          <div class="text-slate-300 leading-relaxed space-y-4">
+            <p>The App does not store any user data on our servers.</p>
+            <p>All data stays on the user’s device or is used temporarily by third-party APIs.</p>
+          </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="glass-panel rounded-2xl p-6 sm:p-8 hover:bg-white/[0.04] transition-colors duration-300">
+          <h2 class="text-xl font-bold text-white mb-4">5. Children’s Privacy</h2>
+          <div class="text-slate-300 leading-relaxed space-y-4">
+            <p>The App is not intended for children under 13.</p>
+            <p>We do not knowingly collect data from children.</p>
+          </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="glass-panel rounded-2xl p-6 sm:p-8 hover:bg-white/[0.04] transition-colors duration-300">
+          <h2 class="text-xl font-bold text-white mb-4">6. Changes to This Policy</h2>
+          <div class="text-slate-300 leading-relaxed space-y-4">
+            <p>We may update this privacy policy. Any changes will be posted on this page.</p>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="border-t border-white/10 bg-black/20 backdrop-blur-lg pt-16 pb-12 mt-auto">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-6">7. Contact Us</h3>
+            <p class="mb-8 text-slate-400">
+              If you have any questions or concerns regarding this policy, please do not hesitate to reach out.
+            </p>
+            
+            <div class="group relative overflow-hidden rounded-xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 p-1 hover:border-cyan-500/50 transition-colors duration-300 max-w-md">
+              <div class="bg-[#0f111a] rounded-lg p-4 flex items-center space-x-4">
+                <div class="p-3 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg text-white shadow-lg shadow-cyan-500/20">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs text-cyan-400 uppercase tracking-wider font-bold mb-0.5">Contact Aizen</p>
+                  <a href="mailto:singhimoksh1212@gmail.com" class="text-white font-medium hover:text-cyan-300 transition-colors break-all">
+                    singhimoksh1212@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Copyright -->
+          <div class="flex flex-col justify-end h-full text-center md:text-right pt-8 md:pt-0 border-t md:border-t-0 border-white/10">
+             <div class="mb-4">
+                <span class="text-xl font-bold text-white tracking-tight">QuickTrack</span>
+             </div>
+             <p class="text-sm text-slate-500 leading-relaxed">
+              &copy; 2025 QuickTrack. <br />
+              All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>
